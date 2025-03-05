@@ -106,7 +106,7 @@ def get_status(request_id: str):
     if db_request:
         return {"request_id": request_id, "status": db_request.status, "output_csv": db_request.output_csv_path}
     else:
-        return {"error": "Invalid request ID"}
+        return {"error": "Invalid ID"}
 
 def trigger_webhook(request_id: str, output_csv: str):
     webhook_url = "https://your-webhook-endpoint.com/callback"
