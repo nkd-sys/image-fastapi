@@ -57,7 +57,7 @@ def upload_csv(file: UploadFile = File(...), background_tasks: BackgroundTasks =
     db.commit()
     
     background_tasks.add_task(process_images, request_id, file_path)
-    return {"request_id": request_id, "status": "Processing started"}
+    return {"request_id": request_id, "status": "Processing started ctrl"}
 
 @celery_app.task
 def process_images(request_id: str, file_path: str):
