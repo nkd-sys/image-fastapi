@@ -69,7 +69,7 @@ def process_images(request_id: str, file_path: str):
         reader = csv.reader(csv_file)
         headers = next(reader)
         
-        output_rows = [headers + ["Output Image Urls"]]
+        output_rows = [headers + ["Output Image Urls ind"]]
         for row in reader:
             serial, product_name, image_urls = row
             image_urls_list = image_urls.split(",")
