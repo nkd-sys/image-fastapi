@@ -30,7 +30,7 @@ Base = declarative_base()
 class ImageProcessingRequest(Base):
     __tablename__ = "image_requests"
     id = Column(String, primary_key=True, index=True)
-    status = Column(String, default="pending")
+    status = Column(String, default="Still loading")
     csv_file_path = Column(String, nullable=False)
     output_csv_path = Column(String, nullable=True)
 
